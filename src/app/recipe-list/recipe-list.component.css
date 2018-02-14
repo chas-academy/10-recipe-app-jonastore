@@ -1,0 +1,30 @@
+img {
+	width: 100px;
+}
+
+.container {
+	text-align: center;
+
+}
+
+ul {
+	text-align: center;
+}
+
+li {
+  width: 33%;
+  float: left;
+  list-style: none;
+  margin: 2%;
+  text-align: center;
+  position: relative;
+
+}
+
+figcaption {
+	color: black;
+}
+
+figcaption:active {
+	color: black;
+}

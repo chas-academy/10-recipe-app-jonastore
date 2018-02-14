@@ -1,0 +1,45 @@
+* {
+	text-align: center;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #000066;
+}
+
+.main {
+	background-color: white;
+} 
+
+h2 {
+  margin-top: 1%;
+  color: #000066; 
+  font-family: Georgia;
+}
+
+img {
+	width: 250px;
+	margin: 1.5%;
+	border: 2px solid black;
+	padding: 2px;
+}
+
+p {
+	text-align: left;
+}
+
+p:first-letter {
+  color: #000066; 
+  font-family: Georgia;
+  font-size: 100px;
+  float: left;
+  line-height: 90px;
+  padding-right: 7px;
+}
+
+.instructionContent {
+	width: 50%;
+	margin: auto;
+
+}

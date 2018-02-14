@@ -1,0 +1,11 @@
+
+<div *ngFor="let recipe of recipes" class="main">
+	
+	<h2>{{ recipe.strMeal }}</h2>
+	<img class="recipeImg" src="http://{{ recipe.strMealThumb }}" />
+	<div class="instructionContent">
+		<a href="{{ recipe.strYoutube }}">Can't read the {{ recipe.strMeal }} instructions? Watch this!</a>
+		<p>{{ recipe.strInstructions }}</p>
+	</div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+<input [(ngModel)]="keyWord">
+<button (click)="searchRecipes(keyWord)">Search</button>
+<br>
+<br>
+<button (click)="searchRecipes('chicken')">Chicken</button>
+<button (click)="searchRecipes('seafood')">Seafood</button>
+<button (click)="searchRecipes('pasta')">Pasta</button>
+<button (click)="searchRecipes('vegan')">Vegan</button>
+<button (click)="searchRecipes('pork')">Pork</button>
+</div>
+
+<div *ngFor="let recipe of recipes" class="container">
+	<ul>
+		<li>
+			<a [routerLink]="['/details', recipe.idMeal]">
+				<img src="http://{{ recipe.strMealThumb }}">
+				<figcaption>{{ recipe.strMeal }}</figcaption>
+
+			</a>
+		</li>
+	</ul>
+</div>
+
