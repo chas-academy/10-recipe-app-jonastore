@@ -22,7 +22,7 @@ img {
 	width: 250px;
 	margin: 1.5%;
 	border: 2px solid black;
-	padding: 2px;
+	padding: 4px;
 }
 
 p {
@@ -42,4 +42,24 @@ p:first-letter {
 	width: 50%;
 	margin: auto;
 
+}
+
+
+li {
+text-align: left;
+}
+
+.ingredients {
+	float: right;
+	list-style: none;
+	margin: 0;
+	margin-right: 0;
+	margin-right: 0;
+}
+
+.measures {
+	float: left;
+	list-style: none;
+	margin-left: 0;
+	margin-left: 0;
 }
