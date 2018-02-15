@@ -3,13 +3,13 @@
 <button (click)="searchRecipes(keyWord)">Search</button>
 <br>
 <br>
-<button (click)="searchRecipes('chicken')">Chicken</button>
-<button (click)="searchRecipes('seafood')">Seafood</button>
-<button (click)="searchRecipes('pasta')">Pasta</button>
+<button (click)="searchRecipes('breakfast')">Breakfast</button>
+<button (click)="searchRecipes('side')">Side dishes</button>
 <button (click)="searchRecipes('vegan')">Vegan</button>
 <button (click)="searchRecipes('vegetarian')">Vegetarian</button>
-<button (click)="searchRecipes('desert')">Desert</button>
 <button (click)="searchRecipes('starter')">Starters</button>
+<button (click)="searchRecipes('desert')">Desert</button>
+<button (click)="searchRecipes('miscellaneous')">Miscellaneous</button>
 </div>
 
 <div *ngFor="let recipe of recipes" class="container">
@@ -17,7 +17,7 @@
 		<li>
 			<a [routerLink]="['/details', recipe.idMeal]">
 				<img src="http://{{ recipe.strMealThumb }}">
-				<figcaption>{{ recipe.strMeal }}</figcaption>
+				<p>{{ recipe.strMeal }}</p>
 
 			</a>
 		</li>

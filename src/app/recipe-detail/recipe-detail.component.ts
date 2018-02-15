@@ -19,7 +19,7 @@ export class RecipeDetailComponent implements OnInit {
   ngOnInit() {
   	const idMeal = this.route.snapshot.params["idMeal"]; //+ delete
 
-    this._recipeService.get(idMeal).subscribe(
+    this._recipeService.getDetail(idMeal).subscribe(
     	 data => this.searchComplete(data))
   	};
 

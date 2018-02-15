@@ -9,6 +9,7 @@ export class RecipeService {
 
   private query: string;
   private API_URL: string = environment.RECIPE_API_URL; //just put url here?
+  private DETAIL_URL: string = environment.RECIPE_DETAIL_URL;
   private SEARCH_URL: string = this.API_URL + '?c=';
 
   constructor(private _http : Http) { }
@@ -18,8 +19,8 @@ export class RecipeService {
   }
   //starts here
 
-  get(idMeal) {
-  	return this._http.get("http://www.themealdb.com/api/json/v1/1/lookup.php?i=" + idMeal ).map(res => res.json());
+  getDetail(idMeal) {
+  	return this._http.get(this.DETAIL_URL + idMeal ).map(res => res.json());
   }
 
   //ends here

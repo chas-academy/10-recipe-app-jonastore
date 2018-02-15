@@ -1,14 +1,17 @@
+
 img {
 	width: 100px;
 }
 
 .container {
 	text-align: center;
-
+  margin: auto;
 }
 
 ul {
 	text-align: center;
+  margin: auto;
+
 }
 
 li {
@@ -16,8 +19,6 @@ li {
   float: left;
   list-style: none;
   margin: 2%;
-  text-align: center;
-  position: relative;
 
 }
 
