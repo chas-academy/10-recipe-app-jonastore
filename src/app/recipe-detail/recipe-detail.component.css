@@ -18,6 +18,10 @@ h2 {
   font-family: Georgia;
 }
 
+button {
+	margin-bottom: 2%;
+}
+
 img {
 	width: 250px;
 	margin: 1.5%;
@@ -41,6 +45,7 @@ p:first-letter {
 .instructionContent {
 	width: 50%;
 	margin: auto;
+	text-align: center;
 
 }
 

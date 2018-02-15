@@ -16,12 +16,18 @@ export class RecipeListComponent implements OnInit {
 
   searchRecipes(query){
   	return this._recipeService.getRecipe(query).subscribe(
-  		data => this.searchComplete(data))
+  		data => this.searchComplete(data)
+      error => this.searchFailed(error)
+      )
   }
 
   searchComplete(data) { 
-  	this.recipes = data.meals;
-  	console.log(data.meals);
+  	 this.recipes = data.meals;
+  	 console.log(data.meals);
+  }
+
+  searchFailed(error) {
+    console.log(error);
   }
 
   ngOnInit() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecipeService} from '../recipe.service';
 
 import { ActivatedRoute } from "@angular/router";
+import { Location } from '@angular/common';
 
 import { Recipe } from "../Recipe.model";
 
@@ -12,9 +13,9 @@ import { Recipe } from "../Recipe.model";
 })
 export class RecipeDetailComponent implements OnInit {
 
-  recipes: any[];
+  recipes: string[];
 
-  constructor(private _recipeService : RecipeService, private route: ActivatedRoute) { }
+  constructor(private _recipeService : RecipeService, private route: ActivatedRoute, private _location : Location ) { }
 
   ngOnInit() {
   	const idMeal = this.route.snapshot.params["idMeal"]; //+ delete
@@ -24,8 +25,12 @@ export class RecipeDetailComponent implements OnInit {
   	};
 
   searchComplete(data) { 
-  	this.recipes = data.meals;
-  	console.log(data.meals);
+  	 this.recipes = data.meals;
+  	 console.log(data.meals);
+  }
+
+  goBack(): void {
+    this._location.back();
   }
 
 }

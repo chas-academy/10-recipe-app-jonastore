@@ -8,21 +8,19 @@ import 'rxjs/add/operator/map';
 export class RecipeService {
 
   private query: string;
-  private API_URL: string = environment.RECIPE_API_URL; //just put url here?
+  private API_URL: string = environment.RECIPE_API_URL; 
   private DETAIL_URL: string = environment.RECIPE_DETAIL_URL;
-  private SEARCH_URL: string = this.API_URL + '?c=';
+  private SEARCH_URL: string = this.API_URL;
 
   constructor(private _http : Http) { }
 
   getRecipe(query) {
-  	return this._http.get(this.SEARCH_URL + query).map(res => res.json());  //change URL to SEARCH_URL or something
+  	return this._http.get(this.SEARCH_URL + query).map(res => res.json());  
   }
-  //starts here
 
   getDetail(idMeal) {
   	return this._http.get(this.DETAIL_URL + idMeal ).map(res => res.json());
   }
 
-  //ends here
 
 }

@@ -4,7 +4,12 @@
 	<h2>{{ recipe.strMeal }}</h2>
 	<img class="recipeImg" src="http://{{ recipe.strMealThumb }}" />
 	<div class="instructionContent">
-		<a *ngIf='recipe.strYoutube' href="{{ recipe.strYoutube }}">Can't read the {{ recipe.strMeal }} instructions? Watch this!</a>
+			<button (click)="goBack()">Go back</button>
+			<br>
+			<a *ngIf='recipe.strSource' href="{{ recipe.strSource }}">Recipe source</a>
+			<br>
+			<br>
+			<a *ngIf='recipe.strYoutube' href="{{ recipe.strYoutube }}">Can't read the {{ recipe.strMeal }} instructions? 	Watch this!</a>
 		<p>{{ recipe.strInstructions }}</p>
 
 		<ul class="measures">
