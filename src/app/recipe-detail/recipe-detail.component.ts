@@ -30,16 +30,17 @@ export class RecipeDetailComponent implements OnInit {
   	 console.log(data.meals);
   }
 
+  saveRecipe() {
+    const strMeal = this.route.snapshot.params["strMeal"];
+    const savedlist = [];
+    savedlist.push(strMeal);
+    console.log(savedlist);
+  } 
+
   goBack(): void {
     this._location.back();
   }
 
-  saveRecipe() {
-    //const strMeal = this.route.snapshot.params["strMeal"];
-
-    this.savedlist.push("test");
-    console.log(savedlist);
-
-  } 
+  
 
 }
