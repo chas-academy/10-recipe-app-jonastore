@@ -1,3 +1,4 @@
+
 <div class="container">
 <input [(ngModel)]="keyWord">
 <button (click)="searchRecipes(keyWord)">Search</button>
@@ -11,6 +12,8 @@
 <button (click)="searchRecipes('desert')">Desert</button>
 <button (click)="searchRecipes('miscellaneous')">Miscellaneous</button>
 </div>
+
+
 
 <div *ngFor="let recipe of recipes" class="container">
 	<ul>
