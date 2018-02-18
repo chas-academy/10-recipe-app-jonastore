@@ -14,11 +14,12 @@ import { Recipe } from "../Recipe.model";
 export class RecipeDetailComponent implements OnInit {
 
   recipes: string[];
+  savedlist: any[] = [];
 
   constructor(private _recipeService : RecipeService, private route: ActivatedRoute, private _location : Location ) { }
 
   ngOnInit() {
-  	const idMeal = this.route.snapshot.params["idMeal"]; //+ delete
+  	const idMeal = this.route.snapshot.params["idMeal"];
 
     this._recipeService.getDetail(idMeal).subscribe(
     	 data => this.searchComplete(data))
@@ -32,5 +33,13 @@ export class RecipeDetailComponent implements OnInit {
   goBack(): void {
     this._location.back();
   }
+
+  saveRecipe() {
+    //const strMeal = this.route.snapshot.params["strMeal"];
+
+    this.savedlist.push("test");
+    console.log(savedlist);
+
+  } 
 
 }
