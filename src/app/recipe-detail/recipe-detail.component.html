@@ -2,7 +2,7 @@
 <div *ngFor="let recipe of recipes" class="main">
 	
 	<h2>{{ recipe.strMeal }}</h2>
-	<img class="recipeImg" src="http://{{ recipe.strMealThumb }}" />
+	<img class="recipeImg" src="{{ recipe.strMealThumb }}" />
 	<div class="instructionContent">
 			<button (click)="goBack()">Go back</button>
 			<button (click)="saveRecipe()">Save</button>
