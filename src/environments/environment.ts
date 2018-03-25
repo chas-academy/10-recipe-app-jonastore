@@ -6,5 +6,13 @@
 export const environment = {
   production: false,
   RECIPE_API_URL: 'https://www.themealdb.com/api/json/v1/1/filter.php?c=',
-  RECIPE_DETAIL_URL: 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
+  RECIPE_DETAIL_URL: 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=',
+  firebase: {
+    apiKey: "AIzaSyDED2o6kYlt7me-8XY8mK6ytNpwhX21-l8",
+    authDomain: "recipeapp-d8f54.firebaseapp.com",
+    databaseURL: "https://recipeapp-d8f54.firebaseio.com",
+    projectId: "recipeapp-d8f54",
+    storageBucket: "",
+    messagingSenderId: "847694167198"
+  }
 };

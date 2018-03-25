@@ -5,29 +5,33 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeService } from './recipe.service';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { AuthComponent } from './auth/auth.component';
+
+import { AuthService } from './auth.service';
+
 
 const routes: Routes = [
   { path: "", component: RecipeListComponent },
-  { path: "details/:idMeal", component: RecipeDetailComponent }
+  { path: "details/:idMeal", component: RecipeDetailComponent },
 
 ];
 
-export const firebaseConfig = {
+/*export const firebaseConfig = {
     apiKey: "AIzaSyDED2o6kYlt7me-8XY8mK6ytNpwhX21-l8",
     authDomain: "recipeapp-d8f54.firebaseapp.com",
     databaseURL: "https://recipeapp-d8f54.firebaseio.com",
     projectId: "recipeapp-d8f54",
     storageBucket: "",
     messagingSenderId: "847694167198"
-}
+}*/
 
 
 @NgModule({
@@ -36,8 +40,7 @@ export const firebaseConfig = {
     RecipeListComponent,
     RecipeDetailComponent,
     SavedRecipesComponent,
-    LoginComponent,
-    SignupComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +49,10 @@ export const firebaseConfig = {
     HttpModule,
     RouterModule.forRoot(routes),
     AlertModule.forRoot(), //delete this because you're not really using alert like this anyway? or are you? find out!
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
-  providers: [RecipeService],
+  providers: [RecipeService, AuthService], //providers: [RecipeService]
   bootstrap: [AppComponent]
 })
 export class AppModule { }
