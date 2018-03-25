@@ -7,25 +7,26 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
+  
   user: Observable<firebase.User>;
 
-  constructor(private firebaseAuth: AngularFireAuth) {
-    this.user = firebaseAuth.authState;
+  constructor(protected fbAuth: AngularFireAuth) {
+    this.user = fbAuth.authState;
   }
 
   serviceRegister(email: string, password: string) {
-    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password)
+    this.fbAuth.auth.createUserWithEmailAndPassword(email, password)
       .then(value => {
         console.log(value);
       })
   }
 
   serviceSignIn(email: string, password: string) {
-    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password)
+    this.fbAuth.auth.signInWithEmailAndPassword(email, password)
   }
 
   serviceSignOut() {
-    this.firebaseAuth.auth.signOut();
+    this.fbAuth.auth.signOut();
   }
 
 }
