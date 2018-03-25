@@ -11,6 +11,7 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeService } from './recipe.service';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { SavedRecipesComponent } from './saved-recipes/saved-recipes.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
   { path: "", component: RecipeListComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
     RecipeListComponent,
     RecipeDetailComponent,
     SavedRecipesComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,

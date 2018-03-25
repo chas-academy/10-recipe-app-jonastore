@@ -5,7 +5,6 @@
 	<img class="recipeImg" src="{{ recipe.strMealThumb }}" />
 	<div class="instructionContent">
 			<button (click)="goBack()">Go back</button>
-			<button (click)="saveRecipe()">Save</button>
 			<br>
 			<a *ngIf='recipe.strSource' href="{{ recipe.strSource }}">Recipe source</a>
 			<br>
