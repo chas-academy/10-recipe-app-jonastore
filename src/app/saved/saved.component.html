@@ -1,0 +1,15 @@
+<p>
+  saved works!
+</p>
+
+<div class="input-group">
+  <input type="text" class="form-controll" #title>
+  <button (click)="addItem(title)">add</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of savedListArray">
+    {{item.title}}
+    <button (click)="deleteItem(item.$key)">delete</button>
+  </li>
+</ul>

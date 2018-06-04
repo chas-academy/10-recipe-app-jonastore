@@ -4,7 +4,7 @@ import { RecipeService} from '../recipe.service';
 import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common';
 
-import { Recipe } from "../Recipe.model";
+import { Recipe } from "../recipe.model";
 
 @Component({
   selector: 'app-recipe-detail',

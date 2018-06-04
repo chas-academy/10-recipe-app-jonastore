@@ -15,3 +15,7 @@
 <button (click)="userSignOut()" *ngIf="authService.user | async">
   Logout
 </button>
+
+<div *ngIf="authService.user | async">
+  <app-saved></app-saved>
+</div>
