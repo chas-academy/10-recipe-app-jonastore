@@ -25,12 +25,13 @@ export class SavedComponent implements OnInit {
     })
   }
   
-  addItem(title) {
-    this.savedService.addTitle(title.value);
+  addItem(title, body) {
+    this.savedService.addTitle(title.value, body.value);
     title.value = null;
+    body.value = null;
   }
 
-  deleteItem($key) {
+  deleteItem($key : string) {
     this.savedService.removeTitle($key);
   }
 

@@ -19,6 +19,7 @@ import { AuthService } from './auth.service';
 import { SavedComponent } from './saved/saved.component';
 
 
+
 const routes: Routes = [
   { path: "", component: RecipeListComponent },
   { path: "details/:idMeal", component: RecipeDetailComponent },

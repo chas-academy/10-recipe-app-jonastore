@@ -6,20 +6,21 @@ export class SavedService {
 
   savedList: AngularFireList<any>;
 
-  constructor(private afs: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) { }
 
   getList() {
-    this.savedList = this.afs.list("titles");
+    this.savedList = this.db.list("titles");
     return this.savedList;
   }
 
-  addTitle(title) {
+  addTitle(title, body) {
     this.savedList.push({
       title: title,
+      body: body
     })
   }
 
-  removeTitle($key) {
+  removeTitle($key : string) {
     this.savedList.remove($key);
   }
 

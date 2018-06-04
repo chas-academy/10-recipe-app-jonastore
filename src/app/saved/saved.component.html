@@ -3,13 +3,18 @@
 </p>
 
 <div class="input-group">
-  <input type="text" class="form-controll" #title>
-  <button (click)="addItem(title)">add</button>
+  <form>
+    <input type="text" class="form-controll" placeholder="recipe title" #title><br>
+    <input type="text" class="form-controll droppable" placeholder="drag or paste recipe here" #body><br>
+    <button class="add" (click)="addItem(title, body)">add</button>
+  </form>
 </div>
 
 <ul>
   <li *ngFor="let item of savedListArray">
-    {{item.title}}
-    <button (click)="deleteItem(item.$key)">delete</button>
+    <a href='{{item.body}}'>{{item.title}}</a>
+      <span>
+          <button (click)="deleteItem(item.$key)">delete</button>
+      </span>
   </li>
 </ul>
