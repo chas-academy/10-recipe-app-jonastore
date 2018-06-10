@@ -17,7 +17,7 @@ import { AuthComponent } from './auth/auth.component';
 
 import { AuthService } from './auth.service';
 import { SavedComponent } from './saved/saved.component';
-
+import { FilterPipe} from './recipe-list/filter.pipe';
 
 
 const routes: Routes = [
@@ -43,6 +43,7 @@ const routes: Routes = [
     RecipeDetailComponent,
     AuthComponent,
     SavedComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

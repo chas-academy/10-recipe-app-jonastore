@@ -13,15 +13,16 @@ export class SavedService {
     return this.savedList;
   }
 
-  addTitle(title, body) {
+  addTitle(title, link, body) {
     this.savedList.push({
       title: title,
+      link: link,
       body: body
     })
   }
 
-  removeTitle($key : string) {
-    this.savedList.remove($key);
+  removeTitle(key : string) {
+    this.savedList.remove(key);
   }
 
 }

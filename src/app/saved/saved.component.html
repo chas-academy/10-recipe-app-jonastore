@@ -1,20 +1,19 @@
-<p>
-  saved works!
-</p>
-
+<h3>Community recipe list</h3>
 <div class="input-group">
   <form>
     <input type="text" class="form-controll" placeholder="recipe title" #title><br>
-    <input type="text" class="form-controll droppable" placeholder="drag or paste recipe here" #body><br>
-    <button class="add" (click)="addItem(title, body)">add</button>
+    <input type="text" class="form-controll droppable" placeholder="drag or paste recipe here" #link><br>
+    <input type="text" class="form-controll" placeholder="write a short review" #body><br>
+    <button class="add" (click)="addItem(title, link, body)">add</button>
   </form>
 </div>
 
 <ul>
   <li *ngFor="let item of savedListArray">
-    <a href='{{item.body}}'>{{item.title}}</a>
+    <a href='{{item.link}}'>{{item.title}}</a>
+    <p><i>{{item.body}}</i></p>
       <span>
-          <button (click)="deleteItem(item.$key)">delete</button>
+          <button (click)="deleteItem(item.key)">delete</button>
       </span>
   </li>
 </ul>

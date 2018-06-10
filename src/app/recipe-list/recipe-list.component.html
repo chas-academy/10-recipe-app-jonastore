@@ -5,13 +5,13 @@
 <button (click)="searchRecipes(keyWord)">Search</button>
 <br>
 <br>
-<button (click)="searchRecipes('breakfast')">Breakfast</button>
-<button (click)="searchRecipes('side')">Side dishes</button>
-<button (click)="searchRecipes('vegan')">Vegan</button>
-<button (click)="searchRecipes('vegetarian')">Vegetarian</button>
-<button (click)="searchRecipes('starter')">Starters</button>
-<button (click)="searchRecipes('desert')">Desert</button>
-<button (click)="searchRecipes('miscellaneous')">Miscellaneous</button>
+
+<input [(ngModel)]="input" placeholder="search text goes here">
+<ul>
+  <li *ngFor="let filter of filters | filter : input">
+    <button (click)="searchRecipes(filter)">{{filter}}</button>
+  </li>
+</ul>
 </div>
 
 

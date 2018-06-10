@@ -12,6 +12,15 @@ export class RecipeListComponent implements OnInit {
 
   recipes: any[];
 
+  filters = [
+    'breakfast',
+    'vegan',
+    'vegetarian',
+    'starter',
+    'desert',
+    'miscellaneous'
+  ];
+
   constructor(private _recipeService : RecipeService) { }
 
   searchRecipes(query){

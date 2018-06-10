@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SavedService } from '../saved.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-saved',
@@ -10,7 +11,6 @@ import { SavedService } from '../saved.service';
 export class SavedComponent implements OnInit {
 
   savedListArray: any[];
-
   constructor(private savedService: SavedService) { }
 
   ngOnInit() {
@@ -25,14 +25,15 @@ export class SavedComponent implements OnInit {
     })
   }
   
-  addItem(title, body) {
-    this.savedService.addTitle(title.value, body.value);
+  addItem(title, link, body) {
+    this.savedService.addTitle(title.value, link.value, body.value);
     title.value = null;
+    link.value = null;
     body.value = null;
   }
 
-  deleteItem($key : string) {
-    this.savedService.removeTitle($key);
+  deleteItem(key : string) {
+    this.savedService.removeTitle(key);
   }
 
 }
