@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css'],
-  moduleId: module.id //delete this
+  moduleId: module.id
 })
 export class RecipeListComponent implements OnInit {
 
