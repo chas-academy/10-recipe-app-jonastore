@@ -6,7 +6,7 @@
 <br>
 <br>
 
-<input [(ngModel)]="input" placeholder="search text goes here">
+<input [(ngModel)]="input" placeholder="Filter alternatives">
 <ul>
   <li *ngFor="let filter of filters | filter : input">
     <button (click)="searchRecipes(filter)">{{filter}}</button>
