@@ -6,3 +6,7 @@
 .add {
     width: 100%;
 }
+
+.list {
+    position:fixed;
+}

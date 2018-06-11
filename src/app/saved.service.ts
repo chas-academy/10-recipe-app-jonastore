@@ -21,7 +21,7 @@ export class SavedService {
     })
   }
 
-  removeTitle(key : string) {
+  removeTitle(key) {
     this.savedList.remove(key);
   }
 

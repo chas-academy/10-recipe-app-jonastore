@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SavedService } from '../saved.service';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-saved',
@@ -17,9 +16,9 @@ export class SavedComponent implements OnInit {
     this.savedService.getList().snapshotChanges()
     .subscribe(item =>{
       this.savedListArray = [];
-      item.forEach(element => {
-        var x = element.payload.toJSON();
-        x['key'] = element.key;
+      item.forEach(data => {
+        var x = data.payload.toJSON();
+        x['key'] = data.key;
         this.savedListArray.push(x);
       })
     })
@@ -32,7 +31,7 @@ export class SavedComponent implements OnInit {
     body.value = null;
   }
 
-  deleteItem(key : string) {
+  deleteItem(key) {
     this.savedService.removeTitle(key);
   }
 

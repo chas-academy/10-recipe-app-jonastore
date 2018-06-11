@@ -26,15 +26,6 @@ const routes: Routes = [
 
 ];
 
-/*export const firebaseConfig = {
-    apiKey: "AIzaSyDED2o6kYlt7me-8XY8mK6ytNpwhX21-l8",
-    authDomain: "recipeapp-d8f54.firebaseapp.com",
-    databaseURL: "https://recipeapp-d8f54.firebaseio.com",
-    projectId: "recipeapp-d8f54",
-    storageBucket: "",
-    messagingSenderId: "847694167198"
-}*/
-
 
 @NgModule({
   declarations: [
@@ -51,12 +42,11 @@ const routes: Routes = [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    AlertModule.forRoot(), //delete this because you're not really using alert like this anyway? or are you? find out!
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-  providers: [RecipeService, AuthService], //providers: [RecipeService]
+  providers: [RecipeService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

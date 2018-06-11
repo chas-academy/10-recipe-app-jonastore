@@ -7,7 +7,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
   transform(alternatives: any[], input: string): any[] {
   if(!input) return alternatives;
-  input = input.toLowerCase();
   return alternatives.filter( it => {
       return it.toString().toLowerCase().includes(input);
     });
