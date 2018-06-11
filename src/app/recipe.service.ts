@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
-import { Http, Headers } from '@angular/http'; //remove headers=
+import { Http } from '@angular/http';
 import { Recipe } from './recipe.model';
 import 'rxjs/add/operator/map';
 
